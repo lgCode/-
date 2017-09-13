@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>轮播图</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	#div{
+		width:300px;height:300px;
+		margin:100px auto;
+		border:2px solid #000;
+		position: relative;
+		overflow: hidden;
+	}
+	#div span,#div label{
+		width:40px;height:60px;
+		display: block;
+		background-color:#928383;
+		font-size:33px;color:#fff;
+		text-align: center;
+		line-height: 60px;
+		position: absolute;top:150px;
+		z-index: 5;
+		transition:opacity 1s;
+		cursor: pointer;
+	}
+	#div span:hover,#div label:hover{
+		opacity: 0.3;
+	}
+	#div span{
+		float: left;
+		left:0;
+	}
+	#div label{
+		float: right;
+		right:0;
+	}
+	#div ul{
+		/*width: 900px;*/
+		display:block; 
+		position: absolute;top:0;left: 0;
+		background-color: red;
+		z-index: 2;
+	}
+
+	#div ul li{
+		float: left;
+	}
+	li,img{
+		width: 300px;height:300px;
+	}
+
+	#slidePoint{
+		/*width:120px;*/height:20px;
+		background-color:rgba(230, 219, 219, 0.39);
+		position:absolute;bottom: 10px;left:50%;
+		/*margin-left:-50px;*/
+		border-radius: 5px;
+		z-index: 20;
+	}
+	#slidePoint p{
+		float: left;
+		width:20px;height:20px;
+		background-color:#fff;
+		border-radius: 100%;
+		margin:0 5px;
+	}
+	#slidePoint p:hover{
+		background-color: #f00;
+	}
+	#slidePoint .redP{
+		background-color: #f00;
+	}
+	</style>
+
+	
+</head>
+<body>
+	<div id="div">
+		<span id="leftMove"><</span>
+		<ul id="uls">
+	
+		</ul>
+		<label id="rightMove">></label>
+		<div id="slidePoint">
+			
+		</div>
+		<div id="slideBg"></div>
+	</div>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<!-- <script type="text/javascript" src="slide.js"></script>
+<script type="text/javascript" src="slide2.js"></script> -->
+<script type="text/javascript" src="slideJQuery2.js"></script>
+</body>
+</html>
